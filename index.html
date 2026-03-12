@@ -1,1 +1,97 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaseen's Engine | 2D Powder Sandbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+        
+        body { 
+            background-color: #0a0a0c; 
+            color: #d1d5db; 
+            font-family: 'Fira Code', monospace; 
+        }
+        .pixel-border { border: 2px solid #3f3f46; box-shadow: 4px 4px 0px #18181b; }
+        .engine-gradient { background: linear-gradient(180deg, #10b981 0%, #059669 100%); }
+        .status-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        
+        /* Particle Background Simulation Look */
+        .bg-grid {
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-grid">
+
+    <div class="bg-amber-500/10 border-b border-amber-500/20 py-2 text-center">
+        <p class="text-[10px] md:text-xs text-amber-500 font-bold tracking-[0.2em] uppercase">
+            <span class="status-pulse mr-2">●</span> Phase: Early Pre-Development Build
+        </p>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 pt-16 pb-24 text-center">
+        
+        <div class="mb-8 inline-block">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-2">
+                YASEEN'S <span class="text-emerald-500 italic">ENGINE</span>
+            </h1>
+            <div class="h-1 w-full bg-emerald-900 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-400 w-1/3"></div>
+            </div>
+        </div>
+
+        <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            A high-performance 2D cellular automata sandbox. Simulate elements, reactions, and physics at the pixel level. 
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-6 justify-center mb-20">
+            <a href="#" class="pixel-border bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 font-bold transition-all">
+                <i class="fa-solid fa-flask mr-2"></i> Download Alpha v0.0.1
+            </a>
+            <a href="#" class="pixel-border bg-zinc-900 hover:bg-zinc-800 text-white px-8 py-4 font-bold transition-all">
+                <i class="fa-brands fa-github mr-2"></i> View Repository
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+            <div class="pixel-border bg-zinc-950 p-6">
+                <h3 class="text-emerald-400 font-bold mb-4 uppercase text-sm tracking-widest">Active Simulation</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Sand / Gravity Logic</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500 text-[10px]"></i> Static Wall Material</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-spinner text-zinc-600 text-[10px]"></i> Liquid Dynamics (WIP)</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle text-zinc-800 text-[10px]"></i> Fire & Heat Transfer</li>
+                </ul>
+            </div>
+
+            <div class="pixel-border bg-zinc-950 p-6">
+                <h3 class="text-emerald-400 font-bold mb-4 uppercase text-sm tracking-widest">Engine Specs</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-[10px] mb-1"><span>OPTIMIZATION</span> <span>85%</span></div>
+                        <div class="h-1.5 bg-zinc-800 rounded-full"><div class="h-full bg-emerald-500 w-[85%]"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[10px] mb-1"><span>STABILITY</span> <span>40%</span></div>
+                        <div class="h-1.5 bg-zinc-800 rounded-full"><div class="h-full bg-amber-500 w-[40%]"></div></div>
+                    </div>
+                    <p class="text-[10px] text-zinc-500 mt-4 leading-tight italic">
+                        Built for modularity. Currently testing multithreaded particle updates to support 100k+ elements.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-24 pt-8 border-t border-zinc-900 text-zinc-600 text-[10px] uppercase tracking-[0.3em]">
+            &copy; 2026 Yaseen Al-Haddad // All Pixels Reserved.
+        </footer>
+
+    </main>
+
+</body>
+</html>
